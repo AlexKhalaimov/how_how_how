@@ -20,8 +20,8 @@ const fileInclude = require('gulp-file-include');
 
 
 // paths
-const srcFolder = './front/src';
-const buildFolder = './assets';
+const srcFolder = './src';
+const buildFolder = './build';
 const paths = {
   srcSvg: `${srcFolder}/img/svg/**.svg`,
   srcImgFolder: `${srcFolder}/img`,
@@ -75,7 +75,7 @@ const styles = () => {
 };
 
 const scripts = () => {
-  return src(paths.srcMainJs)
+  return src(paths.srcMainJs, { allowEmpty: true })
     .pipe(
       plumber(
         notify.onError({

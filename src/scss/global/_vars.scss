@@ -1,0 +1,22 @@
+// base
+:root {
+  --content-width: 1340px;
+  --container-offset: 50px;
+  --container-width: calc(var(--content-width) + var(--container-offset) * 2);
+}
+
+$font-main: "Roboto", sans-serif;
+$font-secondary: "Risque", sans-serif;
+$transition: 0.225s ease-in-out;
+$menu-transition: 0.3s ease-in-out;
+
+// colors
+$white-color: #fff;
+$red-color: #D02B2B;
+$black-color: #000;
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --container-offset: 25px;
+  }
+}

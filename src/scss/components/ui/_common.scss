@@ -1,0 +1,41 @@
+.container {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    width: 100%;
+    max-width: var(--container-width);
+}
+
+.container-lg {
+    margin: 0 auto;
+    padding: 0 calc(var(--container-offset) * 2);
+    width: 100%;
+    max-width: 1920px;
+}
+
+.container-fluid {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    width: 100%;
+    max-width: 100%;
+}
+
+.container-md {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    width: 100%;
+    max-width: 1356px;
+}
+
+.container-sm {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    width: 100%;
+    max-width: 1190px;
+}
+
+.container-xs {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    width: 100%;
+    max-width: 1130px;
+}
