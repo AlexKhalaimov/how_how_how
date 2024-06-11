@@ -240,6 +240,58 @@ textarea {
   max-width: 1130px;
 }
 
+.h1 {
+  font-family: "Risque", sans-serif;
+  font-size: 72px;
+  line-height: 83px;
+}
+
+.h2 {
+  font-family: "Risque", sans-serif;
+  font-size: 56px;
+  line-height: 65px;
+}
+
+.sub-title {
+  font-family: "Risque", sans-serif;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+.star {
+  background-image: url(../img/star@4x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  -webkit-animation: fade 3s linear infinite;
+  animation: fade 3s linear infinite;
+}
+
+@-webkit-keyframes fade {
+  0%, 100% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes fade {
+  0%, 100% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .hamburger {
   padding: 20px 15px;
   display: inline-block;
@@ -561,21 +613,16 @@ body {
   align-self: flex-end;
   overflow: hidden;
   position: relative;
+  z-index: 9;
 }
 
 .hero__title {
-  font-family: "Risque", sans-serif;
-  font-size: 72px;
-  line-height: 83px;
   text-align: left;
   margin-bottom: 20px;
   white-space: nowrap;
 }
 
 .hero__subtitle {
-  font-family: "Risque", sans-serif;
-  font-size: 38px;
-  line-height: 44px;
   text-align: left;
   margin-bottom: 26px;
   white-space: nowrap;
@@ -741,6 +788,97 @@ body {
   to {
     opacity: 1;
   }
+}
+
+.second {
+  background-image: url(../img/screen2_bg@4x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.second__inner {
+  padding-top: 25vh;
+  padding-inline: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 55% 45%;
+  grid-template-columns: 55% 45%;
+  -webkit-column-gap: 18px;
+  -moz-column-gap: 18px;
+  column-gap: 18px;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.swiper-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.slider-lg__slide-container {
+  display: -ms-grid;
+  display: grid;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  padding: 55px 30px;
+  -ms-grid-columns: 300px minmax(100px, 50%);
+  grid-template-columns: 300px minmax(100px, 50%);
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.slider-lg__slide-title {
+  font-family: "Risque", sans-serif;
+  font-size: 42px;
+  line-height: 49px;
+  text-align: left;
+  margin-bottom: 30px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.slider-lg__slide-text {
+  font-size: 28px;
+  line-height: 33px;
+  text-align: left;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.slider-lg__slide-image-container {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
 }
 
 @media screen and (max-width: 1300px) {

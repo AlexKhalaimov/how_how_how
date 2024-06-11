@@ -39,3 +39,42 @@
     width: 100%;
     max-width: 1130px;
 }
+
+.h1 {
+    font-family: $font-secondary;
+    font-size: 72px;
+    line-height: 83px;
+}
+
+.h2 {
+    font-family: $font-secondary;
+    font-size: 56px;
+    line-height: 65px;
+}
+
+.sub-title {
+    font-family: $font-secondary;
+    font-size: 38px;
+    line-height: 44px;
+}
+
+.star {
+    background-image: url(../img/star@4x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    animation: fade 3s linear infinite;
+}
+
+@keyframes fade {
+
+    0%,
+    100% {
+        transform: scale(.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
