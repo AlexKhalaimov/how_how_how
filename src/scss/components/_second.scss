@@ -25,13 +25,31 @@
     display: block;
     width: 100%;
     height: auto;
-    object-fit: cover;
 }
 
-.swiper-thumbs .swiper-slide {}
+.swiper-thumbs {
+    &__slide-wrapper {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid $white-color;
+        background-color: $white-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
 
-.swiper-thumbs .swiper-slide-thumb-active {
-    opacity: 1;
+    .swiper-slide {
+        img {
+            max-height: 100px;
+            object-fit: contain;
+        }
+    }
+}
+
+.swiper-thumbs .swiper-slide-thumb-active .swiper-thumbs__slide-wrapper {
+    background-color: transparent;
 }
 
 .slider-lg {

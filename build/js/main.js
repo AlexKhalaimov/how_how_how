@@ -19,6 +19,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_stars_twinking__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/stars_twinking */ "./src/js/components/stars_twinking.js");
 /* harmony import */ var _components_stars_twinking__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_stars_twinking__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_swiper_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/swiper-slider */ "./src/js/components/swiper-slider.js");
+/* harmony import */ var _components_custom_select__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/custom-select */ "./src/js/components/custom-select.js");
+/* harmony import */ var _components_custom_select__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_custom_select__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -39,6 +42,41 @@ const navMenu = document.querySelector('.js-nav-menu');
 burgerBtn.addEventListener('click', () => {
   burgerBtn.classList.toggle('is-active');
   navMenu.classList.toggle('active');
+});
+
+/***/ }),
+
+/***/ "./src/js/components/custom-select.js":
+/*!********************************************!*\
+  !*** ./src/js/components/custom-select.js ***!
+  \********************************************/
+/***/ (() => {
+
+var select = document.querySelector('.custom-select');
+var selected = document.querySelector('.select-selected');
+var items = document.querySelector('.select-items');
+var hiddenInput = document.getElementById('user-gender');
+selected.addEventListener('click', function () {
+  items.classList.toggle('select-hide');
+  selected.classList.toggle('select-arrow-active');
+});
+var options = items.getElementsByTagName('div');
+for (var i = 0; i < options.length; i++) {
+  options[i].addEventListener('click', function () {
+    console.log(1);
+    var value = this.getAttribute('data-value');
+    selected.innerHTML = this.innerHTML + '<span class="select-arrow"></span>';
+    hiddenInput.value = value;
+    items.classList.add('select-hide');
+    selected.classList.remove('select-arrow-active');
+  });
+}
+document.addEventListener('click', function (e) {
+  console.log(2);
+  if (!select.contains(e.target)) {
+    items.classList.add('select-hide');
+    selected.classList.remove('select-arrow-active');
+  }
 });
 
 /***/ }),
@@ -180,11 +218,11 @@ var swiper1 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper-thumbs
   slidesPerView: 3,
   freeMode: true,
   watchSlidesProgress: true,
-  modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination]
+  modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Thumbs]
 });
 var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".slider-lg", {
   spaceBetween: 10,
-  modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+  modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Thumbs],
   thumbs: {
     swiper: swiper1
   }

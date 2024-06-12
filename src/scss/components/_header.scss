@@ -34,6 +34,7 @@ body {
         right: -100vw;
         bottom: 0;
         z-index: -10;
+
         &::after {
             display: block;
             content: '';
@@ -52,6 +53,7 @@ body {
             z-index: -1;
             transform: translate(50%, -23%);
         }
+
         &.active {
             display: flex;
             justify-content: flex-end;
@@ -60,17 +62,20 @@ body {
             z-index: 9;
             left: 0;
             right: 0;
+
             &::after {
                 width: 100vw;
                 height: 100vw;
                 opacity: 1;
                 z-index: 9;
             }
+
             & .header__mobile-nav-list {
                 opacity: 1;
             }
         }
     }
+
     &__mobile-nav-list {
         max-width: 50vw;
         width: 100%;
@@ -82,9 +87,11 @@ body {
         flex-direction: column;
         opacity: 0;
     }
+
     &__mobile-nav-item {
         margin-bottom: 35px;
     }
+
     &__mobile-nav-link {
         font-family: $font-secondary;
         font-size: 32px;
@@ -92,16 +99,35 @@ body {
         line-height: 37px;
         text-align: left;
     }
+}
 
-    &__nav-link {
-        padding-bottom: 5px;
-        background:
-            linear-gradient(currentColor 0 0) var(--p, 0) 100% /var(--d, 0) 3px no-repeat;
-        transition: 0.3s, background-position 0s 0.3s;
+.rotate {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+    &__front {
+        transform-origin: 50% 0 0;
+        transition: transform .35s cubic-bezier(.76, 0, .24, 1) 0s;
     }
 
-    &__nav-link:hover {
-        --d: 100%;
-        --p: 100%;
+    &__back {
+        transform-origin: 50% 0 0;
+        transition: transform .35s cubic-bezier(.76, 0, .24, 1) 0s;
+        position: absolute;
+        top: 100%;
+        transform: rotateX(-90deg);
+        color: $red-color;
+    }
+
+    &:hover {
+        & .rotate__front {
+            transform: rotateX(-90deg);
+        }
+
+        & .rotate__back {
+            transform: translateY(-100%) rotateX(0);
+        }
     }
 }
