@@ -78,3 +78,26 @@
         transform: scale(1);
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .h1 {
+        font-size: 52px;
+        line-height: 60px;
+    }
+
+    .h2 {
+        font-size: 52px;
+        line-height: 60px;
+    }
+
+    .sub-title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        min-height: 100vh;
+    }
+}

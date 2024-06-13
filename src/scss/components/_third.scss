@@ -186,3 +186,23 @@
 .select-hide {
     display: none;
 }
+
+@media screen and (max-width: 767px) {
+    .third {
+
+        &__inner {
+
+            padding-block: 125px;
+            padding-inline: 0;
+        }
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .custom-select {
+        max-width: initial;
+    }
+}

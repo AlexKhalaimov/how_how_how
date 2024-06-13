@@ -200,3 +200,47 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        min-height: 100vh;
+        display: flex;
+
+        &::before {
+            display: none;
+        }
+
+        &__inner {
+            padding-top: 225px;
+            margin-top: initial;
+            height: auto;
+        }
+
+        &__text {
+            padding: 0 25px;
+            margin-bottom: 70px;
+        }
+
+        &__title {
+            margin-bottom: 12px;
+        }
+
+        &__sub-title {
+            margin-bottom: 40px;
+        }
+
+        &__button-action {
+            margin: 0 auto;
+        }
+
+        &__button-scroll {
+            display: none;
+        }
+
+        &__image-text {
+            display: none;
+        }
+
+
+    }
+}

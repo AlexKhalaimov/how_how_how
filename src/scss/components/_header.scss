@@ -8,7 +8,7 @@ body {
     left: 0;
     width: 100%;
     top: 0;
-    z-index: 9;
+    z-index: 99999999;
 
     &__inner {
         display: flex;
@@ -39,7 +39,6 @@ body {
             display: block;
             content: '';
             background-color: $red-color;
-            //background-image: url("../img/open_menu_bg.svg");
             background-repeat: no-repeat;
             width: 0;
             height: 0;
@@ -128,6 +127,30 @@ body {
 
         & .rotate__back {
             transform: translateY(-100%) rotateX(0);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        padding-top: 25px;
+
+        &__nav {
+            display: none;
+        }
+
+        &__mobile-nav {
+            &.active::after {
+                height: 100vh;
+                width: 100vw;
+                transform: translate(0);
+                border-radius: 0;
+            }
+        }
+
+        &__mobile-nav-list {
+            justify-content: flex-start;
+            padding-top: 100px;
         }
     }
 }
